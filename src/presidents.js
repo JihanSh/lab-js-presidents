@@ -451,15 +451,20 @@ function getAgeAtInauguration(presidentsArr) {
     const ageOfInauguration = president.tookOffice - president.birthYear;
     return {
       ...president,
-      ageOfInauguration: ageOfInauguration
-    }
+      ageOfInauguration: ageOfInauguration,
+    };
   });
-  return arrInauguration
+  return arrInauguration;
 }
 console.log(getAgeAtInauguration(presidents));
 
 // Bonus: Iteration 6 | Presidents Born After - `filter()`
-function getPresidentsBornAfter(presidentsArr, year) {}
+function getPresidentsBornAfter(presidentsArr, year) {
+  return presidentsArr.filter((president) => {
+    president.birthYear > year;
+  });
+}
+console.log(getPresidentsBornAfter(presidents,1790));
 
 // Bonus: Iteration 7 | Count Republican Presidents
 function countRepublicanPresidents(presidentsArr) {}
